@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.3/lottie.js"
+          integrity="sha512-+cOgdFZQcpFOfpIXV1NkF/hHAj9j17SMa+ZQOW1tTFocKYcYPJAThI4PkvpRkHxSeVwWPRkdSAvXn8d25glTrA=="
+          crossorigin="anonymous"></script>
+</head>
+<style>
+  html,body{
+    margin: 0;
+    padding: 0;
+  }
+  *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  .middle{
+    flex: 1;
+  }
+  .bottom{
+    width: 100%;
+  }
+  .btns{
+    display: flex;
+    width: 100%;
+  }
+  .btn{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 70px;
+    padding: 5px;
+    text-decoration: none;
+    border-top: 1px solid #333333;
+  }
+  .btn:not(:last-child){
+    border-right: 1px solid #333333;
+  }
+  .btn__icon{
+    height: 40px;
+  }
+  .btn__text{
+    width: 100%;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #333333;
+  }
+</style>
+<body>
+
+
+<div class="wrapper">
+  <div class="top">Some logo text</div>
+  <div class="middle">
+    <div id="mainAnim"></div>
+  </div>
+  <div class="bottom">
+    <div class="btns">
+      <a href="#" class="btn">
+        <span class="btn__icon" id="profile"></span>
+        <span class="btn__text">profile</span>
+      </a>
+      <a href="#" class="btn">
+        <span class="btn__icon" id="settings"></span>
+        <span class="btn__text">settings</span>
+      </a>
+      <a href="#" class="btn">
+        <span class="btn__icon" id="map"></span>
+        <span class="btn__text">map</span>
+      </a>
+      <a href="#" class="btn">
+        <span class="btn__icon" id="notes"></span>
+        <span class="btn__text">notes</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!--<div id="lottieFirst" style="width: 200px;height: 200px;"></div>-->
+<!--<div id="lottieNew" style="width: 200px;height: 200px;"></div>-->
+<!--<div id="lottieSec" style="width: 200px;height: 200px;"></div>-->
+<!--<button id="playBtn">play</button>-->
+<!--<button id="pauseBtn">pause</button>-->
+<!--<button id="stopBtn">stop</button>-->
+
+<script>
+  var profileIcon = lottie.loadAnimation({
+    container: document.getElementById('profile'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: '1606-profile.json' // the path to the animation json
+  });
+  var settingsIcon = lottie.loadAnimation({
+    container: document.getElementById('settings'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: '13057-setting.json' // the path to the animation json
+  });
+  var mapIcon = lottie.loadAnimation({
+    container: document.getElementById('map'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: '29379-living-location.json' // the path to the animation json
+  });
+  var notesIcon = lottie.loadAnimation({
+    container: document.getElementById('notes'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: '8026-taking-notes.json' // the path to the animation json
+  });
+  document.getElementById('profile').addEventListener('click', function () {
+    profileIcon.play();
+  })
+  document.getElementById('settings').addEventListener('click', function () {
+    settingsIcon.play();
+  })
+  document.getElementById('map').addEventListener('click', function () {
+    mapIcon.play();
+  })
+  document.getElementById('notes').addEventListener('click', function () {
+    notesIcon.play();
+  })
+  document.querySelectorAll('.btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      this.getElementsByClassName('btn__text')[0].remove();
+    })
+  })
+</script>
+<!--<script>-->
+<!--  var animLottie = lottie.loadAnimation({-->
+<!--    container: document.getElementById('lottieFirst'), // the dom element that will contain the animation-->
+<!--    renderer: 'svg',-->
+<!--    loop: true,-->
+<!--    name: 'globeLottie',-->
+<!--    autoplay: false,-->
+<!--    path: '13057-setting.json' // the path to the animation json-->
+<!--  });-->
+<!--  document.getElementById('lottieFirst').addEventListener('click', function () {-->
+<!--    animLottie.play();-->
+<!--  })-->
+<!--  var animLottieSec = lottie.loadAnimation({-->
+<!--    container: document.getElementById('lottieSec'), // the dom element that will contain the animation-->
+<!--    renderer: 'svg',-->
+<!--    loop: false,-->
+<!--    autoplay: false,-->
+<!--    path: '37065-chatting.json' // the path to the animation json-->
+<!--  });-->
+<!--  animLottie.onComplete = function(){-->
+<!--    console.log("works!");-->
+<!--  }-->
+<!--  animLottie.addEventListener('complete', function () {-->
+<!--    console.log("Also works!");-->
+<!--  })-->
+<!--  var curFrame = 0;-->
+<!--  document.getElementById('playBtn').onclick = function () {-->
+<!--    animLottieSec.play();-->
+<!--    console.log(curFrame);-->
+<!--    // animLottieSec.goToAndPlay(curFrame);-->
+<!--    // animLottieSec.playSegments([curFrame, animLottieSec.getDuration(true)], true);-->
+<!--  }-->
+<!--  document.getElementById('pauseBtn').onclick = function () {-->
+<!--    animLottieSec.pause();-->
+<!--    // animLottieSec.togglePause(); play/pause toggler-->
+<!--    curFrame = animLottieSec.currentRawFrame;-->
+<!--    console.log(animLottieSec.currentRawFrame);-->
+<!--    console.log(animLottieSec.getDuration(true));-->
+<!--  }-->
+<!--  document.getElementById('stopBtn').onclick = function () {-->
+<!--    animLottieSec.stop();-->
+<!--  }-->
+<!--</script>-->
+</body>
+</html>
