@@ -30,6 +30,11 @@
   }
   .middle{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
   }
   .bottom{
     width: 100%;
@@ -53,6 +58,7 @@
     border-right: 1px solid #333333;
   }
   .btn__icon{
+    display: none;
     height: 40px;
   }
   .btn__text{
@@ -74,19 +80,19 @@
   </div>
   <div class="bottom">
     <div class="btns">
-      <a href="#" class="btn">
+      <a href="#" class="btn" id="profileBtn">
         <span class="btn__icon" id="profile"></span>
         <span class="btn__text">profile</span>
       </a>
-      <a href="#" class="btn">
+      <a href="#" class="btn" id="settingsBtn">
         <span class="btn__icon" id="settings"></span>
         <span class="btn__text">settings</span>
       </a>
-      <a href="#" class="btn">
+      <a href="#" class="btn" id="mapBtn">
         <span class="btn__icon" id="map"></span>
         <span class="btn__text">map</span>
       </a>
-      <a href="#" class="btn">
+      <a href="#" class="btn" id="notesBtn">
         <span class="btn__icon" id="notes"></span>
         <span class="btn__text">notes</span>
       </a>
@@ -94,15 +100,14 @@
   </div>
 </div>
 
-
-<!--<div id="lottieFirst" style="width: 200px;height: 200px;"></div>-->
-<!--<div id="lottieNew" style="width: 200px;height: 200px;"></div>-->
-<!--<div id="lottieSec" style="width: 200px;height: 200px;"></div>-->
-<!--<button id="playBtn">play</button>-->
-<!--<button id="pauseBtn">pause</button>-->
-<!--<button id="stopBtn">stop</button>-->
-
 <script>
+  var mainAnim = lottie.loadAnimation({
+    container: document.getElementById('mainAnim'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '37145-welcome.json'
+  });
   var profileIcon = lottie.loadAnimation({
     container: document.getElementById('profile'), // the dom element that will contain the animation
     renderer: 'svg',
@@ -131,67 +136,46 @@
     autoplay: false,
     path: '8026-taking-notes.json' // the path to the animation json
   });
-  document.getElementById('profile').addEventListener('click', function () {
+  document.getElementById('profileBtn').addEventListener('click', function () {
+    document.querySelectorAll('.btn').forEach(function (btn) {
+      btn.getElementsByClassName('btn__text')[0].style.display = 'block';
+      btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
+    })
+    this.getElementsByClassName('btn__text')[0].style.display = 'none';
+    this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    profileIcon.stop();
     profileIcon.play();
   })
-  document.getElementById('settings').addEventListener('click', function () {
+  document.getElementById('settingsBtn').addEventListener('click', function () {
+    document.querySelectorAll('.btn').forEach(function (btn) {
+      btn.getElementsByClassName('btn__text')[0].style.display = 'block';
+      btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
+    })
+    this.getElementsByClassName('btn__text')[0].style.display = 'none';
+    this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    settingsIcon.stop();
     settingsIcon.play();
   })
-  document.getElementById('map').addEventListener('click', function () {
+  document.getElementById('mapBtn').addEventListener('click', function () {
+    document.querySelectorAll('.btn').forEach(function (btn) {
+      btn.getElementsByClassName('btn__text')[0].style.display = 'block';
+      btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
+    })
+    this.getElementsByClassName('btn__text')[0].style.display = 'none';
+    this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    mapIcon.stop();
     mapIcon.play();
   })
-  document.getElementById('notes').addEventListener('click', function () {
+  document.getElementById('notesBtn').addEventListener('click', function () {
+    document.querySelectorAll('.btn').forEach(function (btn) {
+      btn.getElementsByClassName('btn__text')[0].style.display = 'block';
+      btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
+    })
+    this.getElementsByClassName('btn__text')[0].style.display = 'none';
+    this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    notesIcon.stop();
     notesIcon.play();
   })
-  document.querySelectorAll('.btn').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      this.getElementsByClassName('btn__text')[0].remove();
-    })
-  })
 </script>
-<!--<script>-->
-<!--  var animLottie = lottie.loadAnimation({-->
-<!--    container: document.getElementById('lottieFirst'), // the dom element that will contain the animation-->
-<!--    renderer: 'svg',-->
-<!--    loop: true,-->
-<!--    name: 'globeLottie',-->
-<!--    autoplay: false,-->
-<!--    path: '13057-setting.json' // the path to the animation json-->
-<!--  });-->
-<!--  document.getElementById('lottieFirst').addEventListener('click', function () {-->
-<!--    animLottie.play();-->
-<!--  })-->
-<!--  var animLottieSec = lottie.loadAnimation({-->
-<!--    container: document.getElementById('lottieSec'), // the dom element that will contain the animation-->
-<!--    renderer: 'svg',-->
-<!--    loop: false,-->
-<!--    autoplay: false,-->
-<!--    path: '37065-chatting.json' // the path to the animation json-->
-<!--  });-->
-<!--  animLottie.onComplete = function(){-->
-<!--    console.log("works!");-->
-<!--  }-->
-<!--  animLottie.addEventListener('complete', function () {-->
-<!--    console.log("Also works!");-->
-<!--  })-->
-<!--  var curFrame = 0;-->
-<!--  document.getElementById('playBtn').onclick = function () {-->
-<!--    animLottieSec.play();-->
-<!--    console.log(curFrame);-->
-<!--    // animLottieSec.goToAndPlay(curFrame);-->
-<!--    // animLottieSec.playSegments([curFrame, animLottieSec.getDuration(true)], true);-->
-<!--  }-->
-<!--  document.getElementById('pauseBtn').onclick = function () {-->
-<!--    animLottieSec.pause();-->
-<!--    // animLottieSec.togglePause(); play/pause toggler-->
-<!--    curFrame = animLottieSec.currentRawFrame;-->
-<!--    console.log(animLottieSec.currentRawFrame);-->
-<!--    console.log(animLottieSec.getDuration(true));-->
-<!--  }-->
-<!--  document.getElementById('stopBtn').onclick = function () {-->
-<!--    animLottieSec.stop();-->
-<!--  }-->
-<!--</script>-->
 </body>
 </html>
