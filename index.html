@@ -71,6 +71,11 @@
     text-transform: capitalize;
     color: #333333;
   }
+  .settings,
+  .notes,
+  .map{
+    display: none;
+  }
 </style>
 <body>
 
@@ -79,6 +84,22 @@
   <div class="top">Some logo text</div>
   <div class="middle">
     <div id="mainAnim"></div>
+    <div class="settings">
+      <div class="list">
+        <ul>
+          <li>some list item 1</li>
+          <li>some list item 2</li>
+          <li>some list item 3</li>
+          <li>some list item 4</li>
+        </ul>
+      </div>
+    </div>
+    <div class="map">
+      here will be your map
+    </div>
+    <div class="notes">
+      here will be your notes
+    </div>
   </div>
   <div class="bottom">
     <div class="btns">
@@ -145,6 +166,10 @@
     })
     this.getElementsByClassName('btn__text')[0].style.display = 'none';
     this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    document.getElementById('mainAnim').style.display = 'block';
+    document.getElementsByClassName('map')[0].style.display = 'none';
+    document.getElementsByClassName('notes')[0].style.display = 'none';
+    document.getElementsByClassName('settings')[0].style.display = 'none';
     profileIcon.stop();
     profileIcon.play();
   })
@@ -155,6 +180,10 @@
     })
     this.getElementsByClassName('btn__text')[0].style.display = 'none';
     this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    document.getElementsByClassName('settings')[0].style.display = 'block';
+    document.getElementById('mainAnim').style.display = 'none';
+    document.getElementsByClassName('map')[0].style.display = 'none';
+    document.getElementsByClassName('notes')[0].style.display = 'none';
     settingsIcon.stop();
     settingsIcon.play();
   })
@@ -165,6 +194,10 @@
     })
     this.getElementsByClassName('btn__text')[0].style.display = 'none';
     this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    document.getElementsByClassName('settings')[0].style.display = 'none';
+    document.getElementsByClassName('notes')[0].style.display = 'none';
+    document.getElementById('mainAnim').style.display = 'none';
+    document.getElementsByClassName('map')[0].style.display = 'block';
     mapIcon.stop();
     mapIcon.play();
   })
@@ -175,6 +208,11 @@
     })
     this.getElementsByClassName('btn__text')[0].style.display = 'none';
     this.getElementsByClassName('btn__icon')[0].style.display = 'block';
+    document.getElementsByClassName('notes')[0].style.display = 'none';
+    document.getElementsByClassName('settings')[0].style.display = 'none';
+    document.getElementById('mainAnim').style.display = 'none';
+    document.getElementsByClassName('map')[0].style.display = 'none';
+    document.getElementsByClassName('notes')[0].style.display = 'block';
     notesIcon.stop();
     notesIcon.play();
   })
