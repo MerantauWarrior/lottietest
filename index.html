@@ -30,6 +30,19 @@
     height: 100%;
     font-family: sans-serif;
   }
+  .top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 15px;
+  }
+  #logoAnim{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
   .middle{
     flex: 1;
     display: flex;
@@ -81,7 +94,7 @@
 
 
 <div class="wrapper">
-  <div class="top">Some logo text</div>
+  <div class="top"><div id="logoAnim"></div> <span>and some text</span></div>
   <div class="middle">
     <div id="mainAnim"></div>
     <div class="settings">
@@ -124,9 +137,24 @@
 </div>
 
 <script>
+  var logoAnim = lottie.loadAnimation({
+    container: document.getElementById('logoAnim'),
+    renderer: 'svg',
+    name: 'mainA',
+    loop: false,
+    autoplay: true,
+    path: '8082-logo-animation.json'
+  });
+  logoAnim.onComplete = function () {
+    console.log(this.totalFrames);
+    console.log(logoAnim.totalFrames);
+    logoAnim.setDirection(-1);
+    logoAnim.goToAndStop(270, true, 'mainA');
+  }
   var mainAnim = lottie.loadAnimation({
     container: document.getElementById('mainAnim'),
     renderer: 'svg',
+    name: 'mainA',
     loop: true,
     autoplay: true,
     path: '37145-welcome.json'
@@ -134,6 +162,7 @@
   var profileIcon = lottie.loadAnimation({
     container: document.getElementById('profile'), // the dom element that will contain the animation
     renderer: 'svg',
+    name: 'profileI',
     loop: false,
     autoplay: false,
     path: '1606-profile.json' // the path to the animation json
@@ -141,6 +170,7 @@
   var settingsIcon = lottie.loadAnimation({
     container: document.getElementById('settings'), // the dom element that will contain the animation
     renderer: 'svg',
+    name: 'settingsI',
     loop: false,
     autoplay: false,
     path: '13057-setting.json' // the path to the animation json
@@ -148,6 +178,7 @@
   var mapIcon = lottie.loadAnimation({
     container: document.getElementById('map'), // the dom element that will contain the animation
     renderer: 'svg',
+    name: 'mapI',
     loop: false,
     autoplay: false,
     path: '29379-living-location.json' // the path to the animation json
@@ -172,6 +203,20 @@
     document.getElementsByClassName('settings')[0].style.display = 'none';
     profileIcon.stop();
     profileIcon.play();
+    // profileIcon.hide();
+    console.log(profileIcon.name);
+    console.log(profileIcon.isLoaded);
+    console.log(profileIcon.totalFrames);
+    console.log(profileIcon.frameRate);
+    console.log(profileIcon.timeCompleted);
+    console.log(profileIcon.animationID);
+    console.log(profileIcon.includeLayers);
+    console.log(profileIcon.getDuration(true));
+    console.log(profileIcon.getDuration(false));
+    console.log(profileIcon.segments);
+    console.log(profileIcon.segmentPos);
+    console.log(profileIcon.playCount);
+    console.log(profileIcon.playSpeed);
   })
   document.getElementById('settingsBtn').addEventListener('click', function () {
     document.querySelectorAll('.btn').forEach(function (btn) {
