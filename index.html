@@ -538,7 +538,8 @@
     autoplay: false,
     path: '8026-taking-notes.json' // the path to the animation json
   });
-  document.getElementById('profileBtn').addEventListener('click', function () {
+  document.getElementById('profileBtn').addEventListener('click', function (e) {
+    e.preventDefault();
     document.querySelectorAll('.btn').forEach(function (btn) {
       btn.getElementsByClassName('btn__text')[0].style.display = 'block';
       btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
@@ -566,7 +567,8 @@
     // console.log(profileIcon.playCount);
     // console.log(profileIcon.playSpeed);
   })
-  document.getElementById('settingsBtn').addEventListener('click', function () {
+  document.getElementById('settingsBtn').addEventListener('click', function (e) {
+    e.preventDefault();
     document.querySelectorAll('.btn').forEach(function (btn) {
       btn.getElementsByClassName('btn__text')[0].style.display = 'block';
       btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
@@ -580,7 +582,8 @@
     settingsIcon.stop();
     settingsIcon.play();
   })
-  document.getElementById('mapBtn').addEventListener('click', function () {
+  document.getElementById('mapBtn').addEventListener('click', function (e) {
+    e.preventDefault();
     document.querySelectorAll('.btn').forEach(function (btn) {
       btn.getElementsByClassName('btn__text')[0].style.display = 'block';
       btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
@@ -595,7 +598,8 @@
     mapIcon.play();
   })
   var playOnScroll = false;
-  document.getElementById('notesBtn').addEventListener('click', function () {
+  document.getElementById('notesBtn').addEventListener('click', function (e) {
+    e.preventDefault();
     document.querySelectorAll('.btn').forEach(function (btn) {
       btn.getElementsByClassName('btn__text')[0].style.display = 'block';
       btn.getElementsByClassName('btn__icon')[0].style.display = 'none';
