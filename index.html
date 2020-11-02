@@ -116,16 +116,13 @@
     text-decoration: none;
     border-top: 1px solid #333333;
   }
-
   .btn:not(:last-child) {
     border-right: 1px solid #333333;
   }
-
   .btn__icon {
     display: none;
     height: 40px;
   }
-
   .btn__text {
     width: 100%;
     margin-top: 5px;
@@ -134,14 +131,12 @@
     text-transform: capitalize;
     color: #333333;
   }
-
   .settings,
   .notes,
   .map {
     display: none;
     padding-bottom: 70px;
   }
-
   #bodymovin {
     position: fixed;
     top: 50px;
@@ -159,6 +154,38 @@
     width: 200px;
     height: 200px;
     margin: 30px auto;
+  }
+  .list{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .scrollToId{
+    display: block;
+    margin: 15px 0;
+  }
+  .settings__content{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .settings__content > div{
+    margin-bottom: 50px;
+  }
+  #settingsAnim{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 150px;
+    height: 150px;
+    background-color: #333333;
   }
 
   @media all and (max-width: 768px) {
@@ -180,11 +207,241 @@
     <div class="settings">
       <div class="list">
         <ul>
-          <li>some list item 1</li>
-          <li>some list item 2</li>
-          <li>some list item 3</li>
-          <li>some list item 4</li>
+          <li><a href="#idOne" class="scrollToId" data-start="0" data-end="25">list item 1</a></li>
+          <li><a href="#idTwo" class="scrollToId" data-start="26" data-end="41">list item 2</a></li>
+          <li><a href="#idThree" class="scrollToId" data-start="42" data-end="63">list item 3</a></li>
+          <li><a href="#idFour" class="scrollToId" data-start="64" data-end="105">list item 4</a></li>
         </ul>
+      </div>
+      <div class="settings__content">
+        <div id="settingsAnim"></div>
+        <div id="idOne">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consectetur dolore fuga iusto magnam
+            officiis possimus repellendus voluptatem voluptatibus voluptatum! In ipsum labore repudiandae tenetur.
+            Cupiditate magni quaerat rerum voluptas.
+          </div>
+          <div>Adipisci aperiam at beatae commodi, corporis, doloremque eligendi est eum excepturi facere ipsa quaerat
+            quam quia quis, quo repellat vitae? Adipisci necessitatibus numquam tempora vel. Adipisci dolorem
+            necessitatibus quidem sapiente.
+          </div>
+          <div>Eum non nostrum tempore. Adipisci, cupiditate dignissimos distinctio eaque enim inventore ipsam iste modi
+            nobis perferendis quae quia repudiandae sint sunt voluptas. Magni mollitia optio quibusdam repudiandae
+            similique. Eveniet, laudantium?
+          </div>
+          <div>Cumque in, itaque maiores placeat quaerat sequi voluptatum. Fuga, natus, quis! A accusantium aliquam
+            aliquid at consequatur, debitis delectus ducimus, incidunt iusto laborum minima nesciunt praesentium
+            similique, tempora totam vitae?
+          </div>
+          <div>Accusantium consectetur consequuntur, cupiditate dolorum eos facilis illo illum impedit incidunt, ipsum
+            libero neque nostrum odio pariatur perferendis quae quasi quisquam ratione repellendus reprehenderit sequi
+            similique sunt suscipit tempora unde?
+          </div>
+        </div>
+        <div id="idTwo">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, amet animi, autem consectetur
+            consequuntur corporis eius eligendi fuga hic inventore laborum minima odit, porro quis quod ratione
+            reiciendis tempora?
+          </div>
+          <div>Alias aut cupiditate deleniti dicta dignissimos eaque eligendi eum, eveniet explicabo harum illum iusto
+            laboriosam maxime minus molestiae mollitia nisi numquam officia quos rerum, tempora unde, velit? Magni rem,
+            temporibus.
+          </div>
+          <div>A accusantium at culpa doloremque eligendi est facilis fugit magni minima, minus modi, mollitia natus
+            necessitatibus non quod saepe sapiente totam vitae voluptas voluptatum! Amet beatae enim maiores sit
+            voluptatibus.
+          </div>
+          <div>Alias aperiam aspernatur consequuntur corporis debitis doloremque esse inventore ipsam itaque minima
+            minus, numquam obcaecati odit officia porro quasi quidem quisquam quos ratione soluta, unde ut velit
+            veritatis. Deleniti, officiis.
+          </div>
+          <div>Alias animi at cum debitis doloribus eaque harum illum molestiae necessitatibus non repellat
+            reprehenderit sed, tempore vitae voluptate. Ad aspernatur blanditiis cupiditate distinctio, est hic in
+            labore nihil sequi unde.
+          </div>
+          <div>Aspernatur consectetur cupiditate dolores earum eos esse est et fuga libero nisi non numquam odio officia
+            pariatur praesentium quasi, quia quo recusandae, repellendus sapiente, sed tenetur voluptas? Ad, sequi,
+            tempora?
+          </div>
+          <div>Amet assumenda at delectus doloribus eius id modi nemo, nulla numquam odio officia officiis omnis
+            perferendis praesentium provident quibusdam quis quisquam rerum sint sunt? Corporis molestiae optio quas.
+            Deleniti, ea?
+          </div>
+          <div>Accusamus aliquam at dolore eum facere iste libero molestias nemo possimus quam, quas quibusdam quis quod
+            ratione recusandae sint soluta tempora voluptatem! Cumque delectus, eligendi itaque iusto libero nisi
+            ratione.
+          </div>
+          <div>Aliquam cupiditate delectus dolore doloremque est facere, ipsa ipsum magnam molestias nostrum, qui quis
+            sequi voluptatem. Cumque ducimus earum, illo laborum laudantium, magnam, maiores nesciunt nulla quam
+            quisquam ratione tenetur.
+          </div>
+          <div>Corporis deserunt et natus nulla quis! Atque consequuntur cumque, dolor eligendi error facere fuga harum
+            minus nobis nostrum porro quas quibusdam quidem quod temporibus velit veritatis vitae voluptates? Nam,
+            possimus!
+          </div>
+        </div>
+        <div id="idThree">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eaque enim, esse explicabo impedit
+            nesciunt quam quod. Alias aliquam eligendi error ipsam ipsum itaque, natus nesciunt nihil, nisi repudiandae
+            vitae.
+          </div>
+          <div>Doloribus earum in maxime odio provident quia sed velit! Architecto beatae, corporis, eum, exercitationem
+            fugiat impedit in ipsa libero maiores quibusdam quos rem repudiandae unde velit voluptatibus. Dolorem, earum
+            facilis.
+          </div>
+          <div>Autem consectetur corporis delectus dignissimos eaque earum error esse expedita fugiat id minus modi
+            mollitia non optio, placeat quis quisquam ratione recusandae repellat repellendus sequi sit tempora tenetur
+            vero voluptatum!
+          </div>
+          <div>Amet asperiores, distinctio eius et fugit ipsum libero magnam neque quia quod, ullam veritatis voluptas
+            voluptate. Aperiam, asperiores, aut cumque, delectus doloribus eaque fuga minus nostrum optio quas saepe
+            voluptatem!
+          </div>
+          <div>At fuga iste minus nobis nostrum omnis possimus quod sit soluta voluptatem? Architecto atque corporis
+            deserunt, dignissimos ducimus eligendi excepturi incidunt minima officiis omnis possimus quas sit ut
+            voluptas voluptate.
+          </div>
+          <div>Accusantium aliquam, deserunt est maiores neque quas quos ratione sed voluptates! Amet blanditiis,
+            commodi delectus dignissimos illo illum, in incidunt minus omnis optio pariatur quae saepe soluta sunt
+            totam. Iste.
+          </div>
+          <div>Ab adipisci autem cupiditate, distinctio dolores in nam quam recusandae similique voluptas. Eos ex fuga
+            fugit incidunt magni nihil nisi quo saepe sed sunt. Dolorem perferendis quisquam soluta tempora ullam!
+          </div>
+          <div>Blanditiis eveniet explicabo, laborum maxime quod reprehenderit voluptatum. At atque consectetur
+            doloribus dolorum ea, eos et expedita itaque quas rem sapiente, similique sunt ut. Accusantium consequatur
+            delectus dignissimos inventore officiis.
+          </div>
+        </div>
+        <div id="idFour">
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, at cupiditate eaque impedit minima
+            molestias praesentium quaerat repellendus sequi voluptate? Adipisci aliquam consequuntur cum molestias
+            pariatur quas vel voluptate. Sed.
+          </div>
+          <div>Cum error est et fuga harum molestiae placeat porro suscipit! Alias corporis, dolor dolores ducimus et
+            eveniet fugit ipsa iure minus nam non nostrum provident qui sapiente sunt suscipit vel!
+          </div>
+          <div>Architecto asperiores atque dolore maxime molestiae nam nobis sunt? Adipisci aperiam asperiores
+            consectetur dolor, enim est, illo inventore iste laborum magnam molestias numquam obcaecati pariatur quia
+            reprehenderit repudiandae sint ut.
+          </div>
+        </div>
+        <div>
+          <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda consequuntur dolor esse fugit iste
+            laboriosam maxime minus modi molestiae omnis perferendis praesentium quam quibusdam, quos sapiente sed velit
+            voluptatibus?
+          </div>
+          <div>Accusantium aliquid aspernatur, atque, cupiditate deleniti distinctio facere fugiat id inventore ipsam
+            ipsum laborum, magni maxime minima nobis non officiis provident qui quis ratione sapiente similique tempora
+            ullam vel veritatis.
+          </div>
+          <div>Aliquid aspernatur aut, autem culpa, deleniti ducimus eaque earum error ex fugit iusto modi nemo,
+            nesciunt omnis optio reprehenderit saepe sunt suscipit! Accusantium doloremque et impedit laboriosam
+            nesciunt nisi placeat.
+          </div>
+          <div>Accusamus architecto atque corporis distinctio eum exercitationem quasi temporibus voluptatem. Ducimus,
+            error, expedita? Alias aspernatur dignissimos est et minima officia. Aut commodi, debitis molestiae omnis
+            qui quos repudiandae saepe tempore.
+          </div>
+          <div>Accusamus aliquid amet aut consectetur dolore dolorum, ducimus eligendi enim ex excepturi exercitationem
+            hic, libero magnam maxime necessitatibus nihil obcaecati odio placeat, porro sunt tenetur unde vel vero
+            voluptas voluptate?
+          </div>
+          <div>Aliquam amet autem blanditiis, culpa dolore dolorum eius esse fugiat illo impedit minima necessitatibus
+            quae qui quibusdam quidem quo quos reiciendis sapiente sequi sint tenetur unde velit veritatis voluptatem
+            voluptatum?
+          </div>
+          <div>Culpa cupiditate deleniti dolor doloremque dolorum ipsa vitae! Aperiam, aspernatur assumenda autem culpa
+            delectus eligendi ex explicabo facilis laboriosam natus nesciunt nihil nobis officiis praesentium quae quis,
+            rem totam velit!
+          </div>
+          <div>Accusantium beatae eius enim illo labore laudantium maiores, officia pariatur placeat quibusdam quidem
+            quisquam, reiciendis sed sit sunt! Ab aut debitis delectus dolor enim eos excepturi in nemo quis similique?
+          </div>
+          <div>Ad expedita iure maxime molestiae neque odit perspiciatis quasi, rem, temporibus, tenetur voluptates
+            voluptatibus. Debitis, error ex facilis itaque, natus nesciunt perspiciatis provident quia reprehenderit sit
+            suscipit ullam velit vero.
+          </div>
+          <div>Consequatur consequuntur cum cumque, delectus deleniti ea esse facere hic itaque molestiae, obcaecati
+            optio pariatur qui recusandae repellendus ullam veritatis? Ab accusantium hic iusto nam possimus quibusdam
+            quo ut vitae!
+          </div>
+          <div>Blanditiis, nam, nulla? A aliquid blanditiis earum esse, ipsam modi natus nihil, omnis possimus quasi
+            quia soluta ullam voluptates! Asperiores corporis incidunt inventore ipsa modi optio praesentium quas
+            ratione vitae?
+          </div>
+          <div>Adipisci consequuntur dolore, ducimus eveniet ex facilis itaque necessitatibus neque, nisi nobis nostrum,
+            numquam quas repudiandae temporibus voluptatibus! Accusantium adipisci consequuntur dignissimos fugiat
+            inventore mollitia quaerat quam, ratione ullam voluptates!
+          </div>
+          <div>A accusantium aliquid aperiam, architecto beatae commodi corporis debitis delectus dolore, dolorem earum
+            inventore ipsam ipsum, maiores nemo obcaecati praesentium quae quidem quod quos ratione suscipit unde! Odio,
+            porro sed.
+          </div>
+          <div>Aliquam aperiam dolore doloremque doloribus ea in laboriosam laudantium magnam mollitia necessitatibus
+            odit optio quam repellendus sequi similique, sint tempore ullam, unde. A esse ex nemo qui similique sit
+            soluta.
+          </div>
+          <div>Commodi consectetur delectus est nihil, officiis veritatis voluptatum? Accusantium aperiam beatae esse
+            fugit labore laudantium nam reprehenderit, ut veritatis voluptatem. Beatae dolore dolorum illum! Aliquam
+            architecto dignissimos nemo quibusdam voluptatibus.
+          </div>
+          <div>Animi aut blanditiis dicta dolore ea earum eos et fugiat hic inventore ipsa magnam magni mollitia nisi
+            nobis numquam obcaecati, odit perspiciatis quasi quod repellendus sed sunt suscipit totam vitae.
+          </div>
+          <div>Ab accusamus est facere iste veritatis. Accusantium aperiam at beatae doloribus ea nisi perferendis quam
+            voluptates. Consequatur ducimus eius error esse harum iure magni, maiores obcaecati quis reprehenderit sunt,
+            tempore!
+          </div>
+          <div>Dignissimos libero praesentium reiciendis. Ab aspernatur autem commodi nemo obcaecati quas sunt.
+            Accusamus magni possimus provident quam vitae. Accusamus assumenda dolorem, eligendi esse minima reiciendis
+            repellat. Animi mollitia quibusdam voluptatum!
+          </div>
+          <div>Assumenda at atque aut commodi incidunt itaque modi non nulla, officia, quisquam rem similique sunt ullam
+            ut vel veniam voluptate. Aperiam autem beatae distinctio explicabo perspiciatis possimus qui sed similique.
+          </div>
+          <div>Accusantium architecto blanditiis dicta dolorem ducimus eaque enim molestiae molestias sit vero? Ad
+            aliquid dolore, doloribus impedit nam optio placeat quam tempore veniam voluptates! Autem deserunt
+            exercitationem impedit maiores tempore!
+          </div>
+          <div>Ad, delectus deserunt doloribus exercitationem laudantium maxime modi molestiae nam perferendis quod
+            recusandae, ut vel vero. Autem beatae dicta eligendi facilis, fuga fugiat in magnam magni porro quos sed
+            vitae.
+          </div>
+          <div>A aliquam aperiam assumenda cupiditate deserunt dolorem ducimus eius enim esse ex expedita fuga ipsa
+            minus nisi numquam perferendis perspiciatis quaerat, quidem repellendus reprehenderit sint tempora vitae
+            voluptatum. Error, nihil?
+          </div>
+          <div>Alias animi asperiores at autem cum deleniti deserunt dignissimos dolorem eaque eius eveniet illo impedit
+            iusto laboriosam maxime neque officia possimus ratione suscipit tenetur totam veritatis vitae, voluptatibus.
+            Enim, sit.
+          </div>
+          <div>Beatae delectus, exercitationem illo quo repudiandae suscipit. Consequuntur dignissimos fugit in iure
+            officiis perspiciatis quos. Animi blanditiis, consectetur, explicabo harum inventore nam nobis officia
+            quibusdam, rerum saepe temporibus unde vero?
+          </div>
+          <div>Atque dolorem doloribus eius necessitatibus obcaecati vel, voluptatem. Accusantium animi doloribus eos
+            ipsum nemo nihil provident? Consequuntur dolorum ea explicabo fuga iste molestiae, nulla porro praesentium
+            quidem saepe sit voluptatibus!
+          </div>
+          <div>A, at aut deleniti dolores doloribus est hic illo iste iure iusto labore necessitatibus neque nihil
+            nostrum omnis possimus quae quas quia rem repellat totam ullam unde ut voluptas voluptatibus?
+          </div>
+          <div>Consequatur in maxime quia soluta tempora? Adipisci autem consequuntur culpa delectus deserunt eligendi
+            harum impedit ipsa iure, labore magni maxime nobis obcaecati possimus, sapiente. Accusamus ad distinctio
+            eligendi et unde?
+          </div>
+          <div>Aperiam asperiores aspernatur at blanditiis culpa cumque debitis eaque eligendi fugit hic, ipsa
+            laudantium minus necessitatibus nobis nostrum nulla obcaecati omnis praesentium provident sed sint sit
+            tenetur ullam voluptate voluptatibus.
+          </div>
+          <div>Accusamus ad aliquid, aperiam cum dolore eligendi fugiat fugit in laboriosam laborum maxime modi
+            molestias nobis officiis porro quasi repudiandae ut, voluptates? Aspernatur in iure minus modi
+            necessitatibus reprehenderit tempore?
+          </div>
+          <div>Ab accusantium ad aliquam autem culpa deserunt earum fugiat fugit inventore labore mollitia, nam nemo
+            neque nihil nisi officia omnis perspiciatis quam quasi, quidem rem rerum sed sunt voluptas voluptatum.
+          </div>
+        </div>
       </div>
     </div>
     <div class="map">
@@ -442,6 +699,34 @@
     crossorigin="anonymous"></script>
 
 <script>
+  var settingsAnim = lottie.loadAnimation({
+    container: document.getElementById('settingsAnim'),
+    renderer: 'svg',
+    name: 'settingsA',
+    loop: false,
+    autoplay: false,
+    path: '37442-passport-travel.json'
+  });
+  $(document).ready(function (){
+
+    $(".scrollToId").click(function (e){
+      e.preventDefault();
+      var startF = parseInt($(this).data('start'));
+      var endF = parseInt($(this).data('end'));
+      if($(this).hasClass('clicked')){
+        settingsAnim.playSegments([endF,startF], true);
+        $(this).removeClass('clicked');
+      }else{
+        settingsAnim.playSegments([startF,endF], true);
+        $(this).addClass('clicked');
+      }
+      $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top
+      }, 1000);
+    });
+  });
+
+
   var musicDuration,
     percents,
     nowLoop = false;
@@ -458,7 +743,7 @@
   })
   var song = document.getElementById('song');
   song.ondurationchange = function() {
-    console.log(Math.floor(song.duration));
+    // console.log(Math.floor(song.duration));
   };
   song.ontimeupdate = function(){
     // console.log(Math.floor((100/song.duration)*song.currentTime));
@@ -488,7 +773,7 @@
   var logoAnim = lottie.loadAnimation({
     container: document.getElementById('logoAnim'),
     renderer: 'svg',
-    name: 'mainA',
+    name: 'logoA',
     loop: false,
     autoplay: true,
     path: '8082-logo-animation.json'
@@ -497,7 +782,7 @@
     // console.log(this.totalFrames);
     // console.log(logoAnim.totalFrames);
     logoAnim.setDirection(-1);
-    logoAnim.goToAndStop(270, true, 'mainA');
+    lottie.goToAndStop(270, true, 'logoA');
   }
   var mainAnim = lottie.loadAnimation({
     container: document.getElementById('mainAnim'),
@@ -636,15 +921,16 @@
     // console.log( (scrollPercentRounded / 100) * anim.totalFrames );
     // console.log(anim.totalFrames / anim.frameRate); = duration
     // console.log(anim.getDuration(true)); = duration frames
-    console.log(anim.getDuration(false));//= duration seconds
+    // console.log(anim.getDuration(false));//= duration seconds
     if (playOnScroll) {
-      console.log((scrollPercentRounded / 100) * 4999)
+      // console.log((scrollPercentRounded / 100) * 4999)
       anim.goToAndStop((scrollPercentRounded / 100) * 4999);
     } else {
       return false
     }
     // anim.goToAndStop( (scrollPercentRounded / 100) * anim.totalFrames, true)
   });
+  console.log(lottie.getRegisteredAnimations());
 </script>
 </body>
 </html>
