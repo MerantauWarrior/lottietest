@@ -46,7 +46,7 @@
 
   #logoAnim {
     width: 100px;
-    height: 100px;
+    height: 60px;
     margin-right: 20px;
   }
 
@@ -166,7 +166,7 @@
   }
   #settingsAnim{
     position: fixed;
-    top: 15px;
+    top: 75px;
     left: 15px;
     width: 150px;
     height: 150px;
@@ -184,6 +184,7 @@
 
 
 <div class="wrapper">
+  <div id="dog" style="max-width: 600px;"></div>
   <div class="top">
     <div id="logoAnim"></div>
     <span>and some text</span></div>
@@ -684,6 +685,14 @@
     crossorigin="anonymous"></script>
 
 <script>
+  
+  lottie.loadAnimation({
+    container: document.getElementById('dog'), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'animated_banners_2.json' // the path to the animation json
+  });
   var settingsAnim = lottie.loadAnimation({
     container: document.getElementById('settingsAnim'),
     renderer: 'svg',
@@ -820,8 +829,9 @@
     document.getElementsByClassName('map')[0].style.display = 'none';
     document.getElementsByClassName('notes')[0].style.display = 'none';
     document.getElementsByClassName('settings')[0].style.display = 'none';
-    profileIcon.stop();
-    profileIcon.play();
+    // profileIcon.stop();
+    // profileIcon.play();
+    profileIcon.goToAndPlay(0, true);
     // profileIcon.hide();
     // console.log(profileIcon.name);
     // console.log(profileIcon.isLoaded);
